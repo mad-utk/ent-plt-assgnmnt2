@@ -1,0 +1,5 @@
+com/example/eventmanagement/service/impl/EventServiceImplTest.class
+com/example/eventmanagement/model/EventTest.class
+com/example/eventmanagement/EventManagementApplicationTest.class
+com/example/eventmanagement/controller/EventControllerTest.class
+com/example/eventmanagement/repository/EventRepositoryTest.class

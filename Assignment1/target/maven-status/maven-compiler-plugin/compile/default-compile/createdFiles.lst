@@ -1,0 +1,6 @@
+com/example/eventmanagement/repository/EventRepository.class
+com/example/eventmanagement/service/EventService.class
+com/example/eventmanagement/EventManagementApplication.class
+com/example/eventmanagement/service/impl/EventServiceImpl.class
+com/example/eventmanagement/controller/EventController.class
+com/example/eventmanagement/model/Event.class
