@@ -28,7 +28,6 @@ public class EventRegistrationRepository {
     }
 
     public EventRegistration updateEventRegistration(Long id, EventRegistration er) {
-        // find eventRegistration based on given id and replace it with new eventRegistration. Also, set id for new eventRegistration.
         er.setId(id);
         for (int i = 0; i < eventRegistrations.size(); i++) {
             if (eventRegistrations.get(i).getId().equals(id)) {

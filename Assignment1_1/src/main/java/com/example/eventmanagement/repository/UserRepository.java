@@ -14,6 +14,15 @@ public class UserRepository {
     private Long id = 0L;
     private List<User> users = new ArrayList<>();
 
+    public User getUser(Long userId) {
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).getId().equals(userId)) {
+                return users.get(i);
+            }
+        }
+        return null;
+    }
+    
     public User addUser(User user) {
         user.setId(++id);
         users.add(user);

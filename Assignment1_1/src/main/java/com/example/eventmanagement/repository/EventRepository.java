@@ -9,10 +9,19 @@ import java.util.List;
 
 @Repository
 public class EventRepository {
-    
+
     // I want to keep auto increment id for every event
     private Long id = 0L;
     private List<Event> events = new ArrayList<>();
+
+    public Event getEvent(Long eventId) {
+        for (int i = 0; i < events.size(); i++) {
+            if (events.get(i).getId().equals(eventId)) {
+                return events.get(i);
+            }
+        }
+        return null;
+    }
 
     public Event addEvent(Event event) {
         event.setId(++id);

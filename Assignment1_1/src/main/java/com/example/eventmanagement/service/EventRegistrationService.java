@@ -8,7 +8,7 @@ import com.example.eventmanagement.model.User;
 
 public interface EventRegistrationService {
     
-    public void addEventRegistration(Long eventId, Long userId) throws Exception;
+    public EventRegistration addEventRegistration(Long eventId, Long userId) throws Exception;
     
     public List<EventRegistration> getAllEventRegistrations() throws Exception;
     
@@ -16,15 +16,15 @@ public interface EventRegistrationService {
     
     public String deleteEventRegistration(Long id) throws Exception;
 
-    public void addUserToEvent(User user, Event event) throws Exception;
+    public void addUserToEvent(Long userId, Long eventId) throws Exception;
 
-    public void removeUserFromEvent(User user, Event event) throws Exception;
+    public void removeUserFromEvent(Long userId, Long eventId) throws Exception;
 
-    public List<User> getAllUsersOfEvent(Event event) throws Exception;
+    public List<User> getAllUsersOfEvent(Long eventId) throws Exception;
 
-    public List<Event> getAllEventsOfUser(User user) throws Exception;
+    public List<Event> getAllEventsOfUser(Long userId) throws Exception;
 
-    public void removeAllUsersFromEvent(Event event) throws Exception;
+    public void removeAllUsersFromEvent(Long eventId) throws Exception;
 
-    public void removeAllEventsOfUser(User user) throws Exception;
+    public void removeAllEventsOfUser(Long userId) throws Exception;
 }
