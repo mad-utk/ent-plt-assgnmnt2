@@ -5,8 +5,9 @@ import com.example.eventmanagement.model.EventRegistration;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class EventRegistrationRepository {
@@ -48,14 +49,13 @@ public class EventRegistrationRepository {
         }
     }
 
-    public List<EventRegistration> getEventRegistrationByEventId(Long eventId) {
-        // find eventRegistration based on given eventId and return list of eventRegistration
-        List<EventRegistration> eventRegistrations = new ArrayList<>();
+    public EventRegistration getEventRegistrationByEventId(Long eventId) {
+        // find eventRegistration based on given eventId and return it
         for (int i = 0; i < eventRegistrations.size(); i++) {
             if (eventRegistrations.get(i).getEventId().equals(eventId)) {
-                eventRegistrations.add(EventRegistrations.get(i));
+                return eventRegistrations.get(i);
             }
         }
-        return eventRegistrations;
+        return null;
     }
 }

@@ -5,21 +5,21 @@ import java.util.Date;
 public class EventRegistration {
 
     // add new field named id
-    private Long regstrationId;
+    private Long id;
     private Long eventId;
     private Long userId;
     
-    public Event(Long eventId, Long userId) {
+    public EventRegistration(Long eventId, Long userId) {
         this.eventId = eventId;
         this.userId = userId;
     }
 
-    public Long getRegstrationId() {
-        return regstrationId;
+    public Long getId() {
+        return id;
     }
 
-    public void setRegstrationId(Long regstrationId) {
-        this.regstrationId = regstrationId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getEventId() {
@@ -42,7 +42,7 @@ public class EventRegistration {
     @Override
     public String toString() {
         return "EventRegistration{" +
-                "regstrationId=" + regstrationId +
+                "regstrationId=" + id +
                 ", eventId='" + eventId + '\'' +
                 ", userId=" + userId +
                 '}';
