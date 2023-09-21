@@ -15,12 +15,12 @@ import java.util.List;
 public class EventRegistrationServiceImpl implements EvenRegistrationtService {
 
     @Autowired
-    private EventRepository eventRepository;
+    private EventRegistrationRepository erRepository;
 
-    public Event addEvent(Event event) throws Exception {
+    public EventRegistration addEventRegistration(EventRegistration er) throws Exception {
         // handle exception if any exception occurs
         try {
-            return eventRepository.addEvent(event);
+            return erRepository.addEventRegistration(er);
         } catch (Exception e) {
             System.out.println(e.getMessage());
             // throws exception
@@ -28,10 +28,10 @@ public class EventRegistrationServiceImpl implements EvenRegistrationtService {
         }
     }
 
-    public List<Event> getAllEvents() throws Exception {
+    public List<EventRegistration> getAllEventRegistrations() throws Exception {
         // handle exception if any exception occurs
         try {
-            return eventRepository.getAllEvents();
+            return erRepository.getAllEventRegistrations();
         } catch (Exception e) {
             System.out.println(e.getMessage());
             // throws exception
@@ -39,10 +39,10 @@ public class EventRegistrationServiceImpl implements EvenRegistrationtService {
         }
     }
 
-    public Event updateEvent(Long id, Event event) throws Exception {
+    public EventRegistration updateEventRegistration(Long id, EventRegistration er) throws Exception {
         // handle exception if any exception occurs
         try {
-            return eventRepository.updateEvent(id, event);
+            return erRepository.updateEventRegistration(id, er);
         } catch (Exception e) {
             System.out.println(e.getMessage());
             // throws exception
@@ -50,12 +50,12 @@ public class EventRegistrationServiceImpl implements EvenRegistrationtService {
         }
     }
 
-    public String deleteEvent(Long id) throws Exception {
+    public String deleteEventRegistration(Long id) throws Exception {
         // handle exception if any exception occurs
-        // return string "Event deleted successfully" if event is deleted successfully
+        // return string "EventRegistration deleted successfully" if eventRegistration is deleted successfully
         try {
-            eventRepository.deleteEvent(id);
-            return "Event deleted successfully";
+            erRepository.deleteEventRegistration(id);
+            return "EventRegistration deleted successfully";
         } catch (Exception e) {
             System.out.println(e.getMessage());
             // throws exception
