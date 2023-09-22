@@ -12,12 +12,14 @@ curl -X POST -H "Content-Type: application/json" -d '{"name":"SJSU SE Orntn","de
 curl -X POST -H "Content-Type: application/json" -d '{"name":"SJSU DS Orntn","description" : "DS Orientation","dateTime" : "2023-08-14"}' http://localhost:8080/event
 
 # Check Events
+echo "/n/n/n"
 echo "********************************************"
 echo "** Checking Events ... ********************"
 echo "******************************************"
 curl -X GET 'http://localhost:8080/users'
 
 # Create Users
+echo "/n/n"
 echo "********************************************"
 echo "** Creating Users ... *********************"
 echo "******************************************"
@@ -32,7 +34,31 @@ curl -X POST -H "Content-Type: application/json" -d '{"name":"HName","emailId" :
 curl -X POST -H "Content-Type: application/json" -d '{"name":"IName","emailId" : "IMail@id.com","mobileNo" : "9000000"}' http://localhost:8080/user
 
 # Check Users
+echo "/n/n"
 echo "********************************************"
-echo "** Creating Users ... *********************"
+echo "** Checking Users ... *********************"
 echo "******************************************"
 curl -X GET 'http://localhost:8080/users'
+
+# Register users to events
+# echo "/n/n"
+# echo "********************************************"
+# echo "** Registering Users to Events ... ********"
+# echo "******************************************"
+curl -X POST -H "Content-Type: application/json" -d '{"userId":1,"eventId":1}' http://localhost:8080/eventRegistration
+curl -X POST -H "Content-Type: application/json" -d '{"userId":2,"eventId":1}' http://localhost:8080/eventRegistration
+curl -X POST -H "Content-Type: application/json" -d '{"userId":3,"eventId":1}' http://localhost:8080/eventRegistration
+curl -X POST -H "Content-Type: application/json" -d '{"userId":4,"eventId":2}' http://localhost:8080/eventRegistration
+curl -X POST -H "Content-Type: application/json" -d '{"userId":5,"eventId":2}' http://localhost:8080/eventRegistration
+curl -X POST -H "Content-Type: application/json" -d '{"userId":6,"eventId":2}' http://localhost:8080/eventRegistration
+curl -X POST -H "Content-Type: application/json" -d '{"userId":7,"eventId":3}' http://localhost:8080/eventRegistration
+curl -X POST -H "Content-Type: application/json" -d '{"userId":8,"eventId":3}' http://localhost:8080/eventRegistration
+curl -X POST -H "Content-Type: application/json" -d '{"userId":9,"eventId":3}' http://localhost:8080/eventRegistration
+
+# Check Users
+# echo "/n/n"
+# echo "********************************************"
+# echo "** Checking Regis ... *********************"
+# echo "******************************************"
+curl -X GET 'http://localhost:8080/eventRegistrations'
+curl -X GET 'http://localhost:8080/eventRegistration/getAllUsersOfEvent/1'

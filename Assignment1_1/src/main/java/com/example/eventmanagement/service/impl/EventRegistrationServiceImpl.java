@@ -146,8 +146,7 @@ public class EventRegistrationServiceImpl implements EventRegistrationService {
     public EventRegistration addEventRegistration(Long eventId, Long userId) throws Exception {
         // handle exception if any exception occurs
         try {
-            EventRegistration er = new EventRegistration(eventId, userId);
-            return er;
+            return erRepository.addEventRegistration(new EventRegistration(eventId, userId));
         } catch (Exception e) {
             System.out.println(e.getMessage());
             // throws exception
