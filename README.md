@@ -14,7 +14,6 @@ The project follows a typical Spring Boot directory structure:
 To run the Event Management application, follow these steps:
 
 1. Clone the repository to your local machine.
-2. Make sure you have Java and Maven installed.
-3. Navigate to "Assignment 2" directory.
-4. Run `mvn spring-boot:run` to start the application.
-5. You can now use the provided CURL commands to interact with the API.
+2. User Docker build command to build an image of the setup
+3. Run the Docker image in the local environment
+5. You can now use the Docker interactive mode to test the provided CURL commands to interact with the APIs.
