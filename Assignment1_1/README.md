@@ -181,3 +181,10 @@ curl --location --request DELETE 'http://localhost:8080/registration/1' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json'
 ```
+
+### Create Docker Image
+**Image Creation**
+docker build -t name_of_image:1.0 ./
+
+**Run Image**
+docker run -d -p 8080:8080 --name container_name name_of_image:1.0 
