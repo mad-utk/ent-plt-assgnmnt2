@@ -94,9 +94,9 @@ curl --location --request GET 'http://localhost:8080/users'
 
 ### Add User
 
-Endpoint: `POST /event`
+Endpoint: `POST /user`
 
-Adds a new event.
+Adds a new user.
 
 **Example CURL Request:**
 ```bash
@@ -110,11 +110,11 @@ curl --location --request POST 'http://localhost:8080/user' \
 }'
 ```
 
-### Update Event
+### Update User
 
 Endpoint: `PUT /user/{userId}`
 
-Updates an existing event.
+Updates an existing user.
 
 **Example CURL Request:**
 ```bash
@@ -128,11 +128,11 @@ curl --location --request PUT 'http://localhost:8080/user/1' \
 }'
 ```
 
-### Delete Event
+### Delete User
 
-Endpoint: `DELETE /event/{eventId}`
+Endpoint: `DELETE /user/{userId}`
 
-Deletes an event.
+Deletes an user.
 
 **Example CURL Request:**
 ```bash
@@ -152,11 +152,11 @@ Retrieves a list of all registrations.
 curl --location --request GET 'http://localhost:8080/registrations'
 ```
 
-### Add User
+### Add Registration
 
 Endpoint: `POST /registration`
 
-Adds a new event.
+Adds a new registration.
 
 **Example CURL Request:**
 ```bash
@@ -169,11 +169,11 @@ curl --location --request POST 'http://localhost:8080/registration' \
 }'
 ```
 
-### Delete Event
+### Delete Registration
 
 Endpoint: `DELETE /registration/{registrationId}`
 
-Deletes an event.
+Deletes a registration.
 
 **Example CURL Request:**
 ```bash
