@@ -94,9 +94,9 @@ curl --location --request GET 'http://localhost:8080/users'
 
 ### Add User
 
-Endpoint: `POST /event`
+Endpoint: `POST /user`
 
-Adds a new event.
+Adds a new user.
 
 **Example CURL Request:**
 ```bash
@@ -110,11 +110,11 @@ curl --location --request POST 'http://localhost:8080/user' \
 }'
 ```
 
-### Update Event
+### Update User
 
 Endpoint: `PUT /user/{userId}`
 
-Updates an existing event.
+Updates an existing user.
 
 **Example CURL Request:**
 ```bash
@@ -128,11 +128,11 @@ curl --location --request PUT 'http://localhost:8080/user/1' \
 }'
 ```
 
-### Delete Event
+### Delete User
 
-Endpoint: `DELETE /event/{eventId}`
+Endpoint: `DELETE /user/{userId}`
 
-Deletes an event.
+Deletes an user.
 
 **Example CURL Request:**
 ```bash
@@ -140,3 +140,51 @@ curl --location --request DELETE 'http://localhost:8080/user/1' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json'
 ```
+
+### List All Registrations
+
+Endpoint: `GET /registrations`
+
+Retrieves a list of all registrations.
+
+**Example CURL Request:**
+```bash
+curl --location --request GET 'http://localhost:8080/registrations'
+```
+
+### Add Registration
+
+Endpoint: `POST /registration`
+
+Adds a new registration.
+
+**Example CURL Request:**
+```bash
+curl --location --request POST 'http://localhost:8080/registration' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "userId" : "1",
+    "eventId" : "1"
+}'
+```
+
+### Delete Registration
+
+Endpoint: `DELETE /registration/{registrationId}`
+
+Deletes a registration.
+
+**Example CURL Request:**
+```bash
+curl --location --request DELETE 'http://localhost:8080/registration/1' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json'
+```
+
+### Create Docker Image
+**Image Creation**
+docker build -t name_of_image:1.0 ./
+
+**Run Image**
+docker run -d -p 8080:8080 --name container_name name_of_image:1.0 
