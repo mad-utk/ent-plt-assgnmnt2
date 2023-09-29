@@ -140,3 +140,44 @@ curl --location --request DELETE 'http://localhost:8080/user/1' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json'
 ```
+
+### List All Registrations
+
+Endpoint: `GET /registrations`
+
+Retrieves a list of all registrations.
+
+**Example CURL Request:**
+```bash
+curl --location --request GET 'http://localhost:8080/registrations'
+```
+
+### Add User
+
+Endpoint: `POST /registration`
+
+Adds a new event.
+
+**Example CURL Request:**
+```bash
+curl --location --request POST 'http://localhost:8080/registration' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "userId" : "1",
+    "eventId" : "1"
+}'
+```
+
+### Delete Event
+
+Endpoint: `DELETE /registration/{registrationId}`
+
+Deletes an event.
+
+**Example CURL Request:**
+```bash
+curl --location --request DELETE 'http://localhost:8080/registration/1' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json'
+```
