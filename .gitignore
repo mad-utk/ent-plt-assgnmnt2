@@ -1,6 +1,7 @@
 target/
 nbproject/
 *.idea
+.vscode/
 
 # Compiled class file
 *.class
