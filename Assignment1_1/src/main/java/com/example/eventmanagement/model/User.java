@@ -1,7 +1,5 @@
 package com.example.eventmanagement.model;
 
-import java.util.Date;
-
 public class User {
 
     // add new field named id

@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-register-m3-microservice
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: event-register-m3-microservice
+  template:
+    metadata:
+      labels:
+        app: event-register-m3-microservice
+    spec:
+      containers:
+      - name: event-register-m3-container
+        image: cc600200/event-register-mgmt-m3:latest
+        ports:
+        - containerPort: 8080
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-mgmt-m1-microservice
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: event-mgmt-m1-microservice
+  template:
+    metadata:
+      labels:
+        app: event-mgmt-m1-microservice
+    spec:
+      containers:
+      - name: event-mgmt-m1-container
+        image: cc600200/event-mgmt-m1:latest
+        ports:
+        - containerPort: 8080
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-mgmt-m2-microservice
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: user-mgmt-m2-microservice
+  template:
+    metadata:
+      labels:
+        app: user-mgmt-m2-microservice
+    spec:
+      containers:
+      - name: user-mgmt-m2-container
+        image: cc600200/user-mgmt-m2:latest
+        ports:
+        - containerPort: 8080

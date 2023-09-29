@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-register-monolithic
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: event-register-monolithic
+  template:
+    metadata:
+      labels:
+        app: event-register-monolithic
+    spec:
+      containers:
+      - name: event-register-monolithic-container
+        image: cc600200/event-registration-monolithic:latest
+        ports:
+        - containerPort: 8080

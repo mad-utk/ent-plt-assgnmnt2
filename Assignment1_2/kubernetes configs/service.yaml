@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: event-register-m3-service
+spec:
+  selector:
+    app: event-register-m3-microservice
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 30081
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: event-mgmt-m1-service
+spec:
+  selector:
+    app: event-mgmt-m1-microservice
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 30082
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-mgmt-m2-service
+spec:
+  selector:
+    app: user-mgmt-m2-microservice
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 30083
